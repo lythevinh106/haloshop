@@ -1,0 +1,17 @@
+.snow-mode-layout {
+
+    background-image: url(https://hoanghamobile.com/Content/2023/2023-bg-top.png);
+    background-repeat: repeat;
+    background-position: right;
+    background-size: 185%;
+    z-index: 0;
+    position: relative;
+
+    .effect-snow {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+    }
+}

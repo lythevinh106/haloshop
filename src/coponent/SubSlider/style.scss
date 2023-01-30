@@ -1,0 +1,101 @@
+:root {
+
+    --spacing-sub-slider: 10px;
+}
+
+.sub-slider-wrapper {
+
+
+    .sub-slider--title {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+
+    .sub-slider-item-wrapper {
+        padding: 5px var(--spacing-sub-slider);
+        background: transparent;
+
+        //     .sub-slider-item {
+        //         padding: 20px 10px;
+
+        //         .slider__img {
+        //             height: 200px;
+
+        //             width: 100%;
+
+        //         }
+
+        //         .slider__title {
+        //             font-family: "font2";
+        //             text-align: center;
+        //             display: -webkit-box;
+        //             -webkit-line-clamp: 1;
+        //             -webkit-box-orient: vertical;
+        //             overflow: hidden;
+        //             text-overflow: ellipsis;
+        //             cursor: pointer;
+        //             font-size: 1.5rem;
+        //             margin-top: 10px;
+        //             font-weight: bold;
+        //         }
+
+        //         .slider__price {
+        //             margin-top: 20px;
+        //             display: flex;
+        //             justify-content: space-between;
+
+        //         }
+
+        //         .price--new {
+
+        //             font-family: "font2";
+        //             font-weight: bold;
+        //             font-family: 1.3rem;
+        //             color: var(--c_red-default)
+        //         }
+
+        //         .price--old {
+        //             font-family: "font2";
+        //             font-family: 1.1rem;
+        //             text-decoration: line-through;
+
+        //         }
+        //     }
+
+
+        // }
+
+
+
+    }
+
+    .slick-arrow {
+        z-index: 3;
+        width: 35px;
+        height: 35px;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 50%;
+
+        &.slick-next {
+            position: absolute;
+            right: 7px;
+        }
+
+        &.slick-prev {
+            position: absolute;
+            left: 7px;
+        }
+
+
+    }
+}
+
+
+@media only screen and (max-width: 60rem) {
+    .sub-slider-wrapper {
+        .sub-slider--title {
+            width: 100%;
+            margin-bottom: 12px;
+        }
+    }
+}

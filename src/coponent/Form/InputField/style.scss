@@ -1,0 +1,70 @@
+.input-wrapper {
+  height: 100%;
+  position: relative;
+
+
+  .input-error {
+    width: 100%;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    color: red;
+    z-index: 999 !important;
+    font-family: "font5";
+    padding-left: 5px;
+    font-size: 1.2rem;
+    text-align: left;
+
+  }
+
+  &.input--grey {
+
+    input,
+    textarea {
+      background-color: #e5e5e5;
+      height: 100%;
+      resize: none;
+    }
+
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+
+
+
+
+    border-radius: 10px;
+
+
+
+  }
+
+  textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+
+
+  ::-webkit-input-placeholder {
+    font-size: 14px;
+    font-family: var(--font-third);
+
+
+
+  }
+}
+
+.input-wrapper.error {
+
+  input {
+    border-bottom: 1px solid rgb(255, 0, 0)
+  }
+}

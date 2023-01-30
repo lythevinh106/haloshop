@@ -1,0 +1,24 @@
+.detail-product-layout {
+    margin: 0 auto;
+    width: var(--w_main-layout);
+
+    &__slider {
+        margin-top: 20px;
+    }
+
+    &__sub-banner {
+        margin: 30px 0;
+    }
+
+    &__suggestion {
+        margin: 30px 0;
+    }
+
+    &__about-us {}
+
+    &__contact {
+        margin-top: 30px;
+
+    }
+
+}

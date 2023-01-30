@@ -1,0 +1,123 @@
+.header-wrapper {
+    width: 100%;
+
+
+
+    .header-main {
+        width: 100%;
+        color: var(--c_white-default);
+
+        margin: 0 auto;
+        // height: 56px;
+        min-height: 56px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-logo {
+            width: 205px;
+            display: block;
+
+            img {
+                width: 100%;
+                height: 40px;
+                object-fit: cover;
+
+
+            }
+
+        }
+
+        .header-nav-header {
+            flex: 1;
+        }
+
+        .header-cat {
+            width: 100%;
+            margin-top: 20px;
+            background-color: var(--c_green_default);
+            border-radius: 5px;
+            box-shadow: 0 4px 6px #ccc;
+        }
+
+
+    }
+
+
+
+}
+
+
+@media only screen and (max-width: 60rem) {
+
+
+    .header-wrapper {
+        width: 100%;
+
+
+
+        .header-main {
+            width: 100%;
+            color: var(--c_white-default);
+
+            margin: 0 auto;
+            // height: 56px;
+            min-height: 56px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            .header-logo {
+                order: 1;
+                width: 60%;
+                display: block;
+                text-align: center;
+
+                img {
+                    width: 200px;
+                    height: 40px;
+                    object-fit: cover;
+
+
+                }
+
+            }
+
+
+            .header-input {
+                order: 3;
+                width: 100%;
+            }
+
+            .header-nav-header {
+
+                order: 2;
+                flex-grow: unset;
+                flex-basis: 40%;
+
+
+            }
+
+            .header-cat {
+                display: none;
+                width: 100%;
+                margin-top: 20px;
+                background-color: var(--c_green_default);
+                border-radius: 5px;
+                box-shadow: 0 4px 6px #ccc;
+            }
+
+
+        }
+
+
+
+    }
+
+
+
+
+
+}

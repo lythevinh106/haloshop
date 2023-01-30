@@ -1,0 +1,24 @@
+.title-cart {
+    font-family: "font3";
+    font-weight: bold;
+
+    background-image: linear-gradient(var(--c_green_second), var(--c_green_default));
+
+    color: var(--c_white_default);
+    padding: 5px 0px 5px 0px;
+    width: 100%;
+
+    text-align: center;
+
+    &.title-orange {
+        background-image: linear-gradient(rgb(215, 146, 16), rgb(228, 55, 17));
+    }
+}
+
+
+@media only screen and (max-width: 60rem) {
+
+    .title-cart {
+        font-size: 13px;
+    }
+}

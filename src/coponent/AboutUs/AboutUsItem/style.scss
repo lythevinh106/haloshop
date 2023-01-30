@@ -1,0 +1,94 @@
+.about-us-item {
+  display: flex;
+  align-items: center;
+
+
+
+  .item-icon {
+
+
+    svg {
+      font-size: 60px;
+      color: var(--c_green_second);
+
+    }
+  }
+
+
+  .item-main {
+
+    margin-left: 4px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .title {
+    font-family: "font1";
+    font-size: 14px;
+    font-weight: 0;
+
+
+  }
+
+  .title-bold {
+    font-family: "font2";
+    font-size: 16px;
+    font-weight: bold;
+
+
+
+  }
+
+}
+
+@media only screen and (max-width: 60rem) {
+
+  .about-us-item {
+    display: flex;
+    align-items: center;
+
+
+
+    .item-icon {
+
+
+      svg {
+        font-size: 30px;
+        color: var(--c_green_second);
+
+      }
+    }
+
+
+    .item-main {
+
+      margin-left: 4px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+
+    .title {
+      font-family: "font1";
+      font-size: 11px;
+      font-weight: 0;
+
+
+    }
+
+    .title-bold {
+      font-family: "font2";
+      font-size: 13px;
+      font-weight: bold;
+
+
+
+    }
+
+  }
+}

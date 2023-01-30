@@ -1,0 +1,48 @@
+.lunar-year-main {
+    background: transparent;
+    position: fixed;
+    z-index: 9;
+    width: 70%;
+    height: auto;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .new-year-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 38%;
+
+
+        z-index: 10;
+
+
+
+
+        .new-year__title {
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    }
+
+    .btn-off-lunar {
+        width: 60px;
+        position: absolute;
+        top: 64%;
+        left: 62%;
+        z-index: 13;
+
+    }
+
+
+
+}

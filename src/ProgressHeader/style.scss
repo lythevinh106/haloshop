@@ -1,0 +1,15 @@
+.progress-header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: var(--c_green_default);
+    display: none;
+    z-index: 4;
+
+    &.active {
+
+        display: block;
+    }
+
+}

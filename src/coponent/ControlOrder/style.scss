@@ -1,0 +1,32 @@
+.control-oder-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    border: 1px solid #c4c4c4;
+
+    .control {
+
+        width: 35px;
+        height: 35px;
+
+        &--less {}
+
+        &--plus {}
+
+        &__input {
+            text-align: center;
+            padding: 0 2px;
+            width: 45px;
+            height: 35px;
+
+            input {
+                text-align: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+
+}

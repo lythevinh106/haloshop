@@ -1,0 +1,113 @@
+.order {
+
+
+
+
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 50px auto;
+
+
+    }
+
+    &__title {
+        font-size: 33px;
+        font-weight: bold;
+
+    }
+
+    &__input {
+        margin-top: 25px;
+        width: 400px;
+    }
+
+    &--result {
+        margin-top: 40px;
+
+        &__title {
+            text-align: center;
+            font-size: 35px;
+            font-weight: bold;
+            color: var(--c_green_default)
+        }
+
+        &__main {
+            margin-top: 20px;
+
+            .result_item {
+
+                margin-top: 10px;
+                padding: 8px 8px;
+                border-radius: 5px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: var(--c_green_second);
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+                .item__img {
+                    max-width: 80px;
+                    height: auto;
+
+
+                    img {
+                        object-fit: cover;
+                    }
+
+
+                }
+
+                .item__name {
+                    flex-basis: 25%;
+                    color: var(--c_white_default);
+
+                }
+
+                .item__price {
+
+                    color: var(--c_red-second);
+                    font-weight: bold;
+
+                    span {
+                        margin-left: 4px;
+                        color: var(--c_white_default);
+                        font-weight: bold;
+                    }
+                }
+
+                .item__quantity {
+
+
+                    color: var(--c_red-second);
+                    font-weight: bold;
+
+                    span {
+                        margin-left: 4px;
+                        color: var(--c_white_default);
+                        font-weight: bold;
+                    }
+                }
+
+                .item__status {
+
+
+                    color: var(--c_red-second);
+                    font-weight: bold;
+
+                    span {
+                        margin-left: 4px;
+                        color: var(--c_white_default);
+
+                        font-weight: bold;
+                    }
+                }
+
+
+            }
+        }
+    }
+}

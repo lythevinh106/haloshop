@@ -1,0 +1,239 @@
+.cart-empty {
+    width: 100%;
+    background-color: var(--c_white_default);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px 0;
+
+
+
+    &__image {
+        height: 500px;
+    }
+
+    &__title {
+        text-align: center;
+
+        width: 100%;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}
+
+
+
+
+.cart-wrapper {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .cart__back {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &__icon {
+            display: flex;
+            align-items: center;
+
+            svg {
+                font-size: 2.3rem;
+                color: var(--c_green_default);
+            }
+        }
+
+        &__title {
+
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: var(--c_green_default);
+        }
+    }
+
+
+
+    .cart__main {
+        width: 45%;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+
+        .cart__main--info {
+
+
+
+            .cart-icon {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+
+                svg {
+                    font-size: 80px;
+                    color: var(--c_green_default);
+                }
+            }
+
+            .cart-item {
+
+                &.hidden {
+                    display: none;
+                }
+
+                margin-bottom: 30px;
+                background-color: var(--c_white_default);
+                padding: 10px;
+                width: 100%;
+                position: relative;
+
+                .cart__btn-close {
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+
+                }
+
+                .cart-item-product-wrapper {
+                    width: 600px;
+                }
+
+                .cart-item__product {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .cart-item__control {
+                    width: 100%;
+                    margin: 20px auto;
+                    width: 115px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+
+            }
+
+
+            .cart-total {
+                margin-bottom: 70px;
+
+
+                background-color: var(--c_white_default);
+                padding: 10px;
+
+                .cart-total--item {
+                    padding: 5px;
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                    color: var(--c_green_default);
+
+                    &:nth-child(3) {}
+
+                    &__price {
+
+                        font-weight: bold;
+                        color: var(--c_red-second);
+                    }
+                }
+
+            }
+
+
+        }
+
+
+    }
+
+    .cart__main--auth__info {
+
+
+
+        .auth_title {
+            font-size: 1.5rem;
+            padding: 5px 10px;
+
+            span {
+                color: var(--c_red-second);
+                // cursor: pointer;
+            }
+        }
+
+        .auth_btn {
+            margin-top: 20px;
+        }
+
+
+
+
+    }
+
+    .cart__main--form {
+
+        width: 40%;
+
+        &__title {
+            color: red;
+            text-align: center;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+
+        &__info {
+            margin-top: 40px;
+        }
+
+    }
+
+
+
+}
+
+@media only screen and (max-width: 60rem) {
+
+
+    .cart-wrapper {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        .cart__main--auth__info {
+            margin: 10px 0px;
+        }
+
+        .cart__main {
+            width: 100%;
+
+            .cart__main--info {
+                .cart-item {
+                    .cart-item-product-wrapper {
+                        width: 100%
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+        }
+
+        .cart__main--form {
+            width: 100%;
+        }
+
+    }
+}

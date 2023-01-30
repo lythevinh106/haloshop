@@ -1,0 +1,18 @@
+.cart-layout {
+    margin: 0 auto;
+    width: var(--w_main-layout);
+
+    .content {
+
+        margin-top: 30px;
+    }
+
+    &__about-us {
+
+        margin-top: 30px;
+    }
+
+    &__contact {
+        margin-top: 30px;
+    }
+}

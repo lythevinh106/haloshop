@@ -1,0 +1,173 @@
+:root {
+
+  --spacing-item-slider: 6px
+}
+
+
+.slider {}
+
+
+
+
+
+.slider-image-wrapper {
+  background-color: var(--c_white_default);
+
+  min-height: 375px;
+
+  border-radius: 10px;
+
+
+  .slick-arrow.slick-next {
+
+    &::before {
+      color: black;
+      font-size: 24px;
+      position: relative;
+
+    }
+
+  }
+
+  .slick-arrow.slick-prev {
+
+    &::before {
+      color: black;
+      font-size: 24px;
+      position: relative;
+
+
+
+    }
+  }
+
+
+  .slider-sub {
+
+    margin-top: 50px;
+
+
+
+
+    .slide-list {
+      padding: 0px calc(var(--spacing-item-slider) * (-1));
+
+
+    }
+
+    .slick-current {
+
+
+      .slider-title {
+        border-radius: 10px !important;
+        background: transparent linear-gradient(90deg, #009981 0%, #00483d 100%) 0% 0% no-repeat;
+
+        p {
+          color: var(--c_white_default) !important;
+
+
+        }
+
+      }
+    }
+
+
+
+
+    .slider-item {
+
+      width: 100%;
+
+      padding: 3px var(--spacing-item-slider);
+      transition: .2s linear;
+
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+
+
+      .slider-title {
+
+
+        height: 50px;
+
+
+        //  box-shadow:0 5px 7px #00000029;
+        display: flex;
+        position: relative;
+
+
+        p {
+          position: absolute;
+          color: #666;
+          ;
+          top: 50%;
+
+          transform: translateY(-50%);
+          left: 15px;
+
+
+        }
+
+
+
+      }
+
+    }
+  }
+
+
+  .slider-main {
+    box-shadow: 0 20px 13px #ccc;
+    border-radius: 10px;
+
+    .slider-item {
+      width: 100%;
+      height: 100%;
+
+
+      .slider-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 10px;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+.slick-slide *:focus {
+  outline: none;
+}
+
+
+@media only screen and (max-width: 60rem) {
+
+  // .slick-current {
+  //   .slider-title {}
+  // }
+
+  .slider-image-wrapper {
+    min-height: auto;
+
+    .slider-sub {
+      .slider-item {
+        .slider-title {
+          height: 30px;
+        }
+      }
+    }
+  }
+
+
+
+}

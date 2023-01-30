@@ -1,0 +1,134 @@
+.contact-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: var(--c_white_default);
+    border-radius: 10px;
+    margin: 10px 0px;
+
+
+    .contact__icon {
+        width: 143px;
+        height: auto;
+
+
+    }
+
+    .contact__subscribe {
+        text-align: center;
+
+        &__title {
+            margin: 5px 0;
+            font-size: 1.9rem;
+            font-family: "font2";
+            font-weight: bold;
+
+        }
+
+        &__des {
+            font-family: "font2";
+            margin: 5px 0;
+        }
+
+
+
+    }
+
+
+
+    .contact__form {
+        display: flex;
+        align-items: center;
+        height: 40px;
+
+        .contact__form__input {
+
+            width: 314px;
+            height: inherit;
+            position: relative;
+
+
+
+        }
+
+        .contact__form__btn {
+            width: 40px;
+            height: inherit;
+
+            // padding: 10px;
+
+        }
+
+    }
+
+
+}
+
+
+@media only screen and (max-width: 60rem) {
+
+    .contact-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        background-color: var(--c_white_default);
+        border-radius: 10px;
+        margin: 10px 0px;
+
+
+        .contact__icon {
+            width: 143px;
+            height: auto;
+
+
+        }
+
+        .contact__subscribe {
+            text-align: center;
+
+            &__title {
+                margin: 5px 0;
+                font-size: 1.9rem;
+                font-family: "font2";
+                font-weight: bold;
+
+            }
+
+            &__des {
+                font-family: "font2";
+                margin: 5px 0;
+                font-size: 1.4rem;
+            }
+
+
+
+        }
+
+
+
+        .contact__form {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 40px;
+
+            .contact__form__input {
+                flex-basis: 80%;
+            }
+
+            .contact__form__btn {
+
+                // padding: 10px;
+                margin-left: 10px;
+                flex: 1;
+
+            }
+
+        }
+
+
+    }
+}

@@ -1,0 +1,219 @@
+.product-info-wrapper {
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .product__title {
+        width: 100%;
+        margin: 10px 0px;
+        font-size: 20px;
+        font-family: "font5";
+
+    }
+
+    .product__main {
+
+
+        width: 100%;
+
+        display: flex;
+
+
+        &__slider {
+            width: 35%;
+        }
+
+        &__center {
+
+            width: 50%;
+            margin-left: 40px;
+
+
+
+        }
+
+
+    }
+
+
+
+    .product__des-wrapper {
+
+
+        margin: 30px 0px;
+        width: 80%;
+
+
+        .product__des {
+            padding: 30px;
+            position: relative;
+
+            &__content {
+
+
+                max-height: 300px;
+                overflow: hidden;
+            }
+
+            &__content.active {
+                max-height: 100%;
+
+
+            }
+
+            &__btn {
+
+                width: 100%;
+                text-align: center;
+                padding: 15px 0;
+                position: absolute;
+                bottom: 0;
+                font-weight: bold;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: var(--c_white_default);
+                // box-shadow: 5px 2px 3px white;
+                cursor: pointer;
+                color: var(--c_green_default);
+
+
+                span {
+                    opacity: unset;
+                    font-weight: bold;
+
+                }
+
+                &:hover {
+                    background: linear-gradient(var(--c_green_default), var(--c_green_second));
+                }
+
+                &.active {
+                    opacity: 0.6;
+
+                    &:hover {
+
+                        background: transparent;
+                    }
+
+                }
+            }
+        }
+
+
+
+    }
+}
+
+
+@media only screen and (max-width: 60rem) {
+
+    .product-info-wrapper {
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .product__title {
+            width: 100%;
+            margin: 10px 0px;
+            font-size: 20px;
+            font-family: "font5";
+            text-align: center;
+
+        }
+
+        .product__main {
+
+
+            width: 100%;
+
+            display: flex;
+            flex-wrap: wrap;
+
+
+            &__slider {
+                width: 100%
+            }
+
+            &__center {
+
+                width: 100%;
+                margin-left: unset;
+
+
+
+            }
+
+
+        }
+
+
+
+        .product__des-wrapper {
+
+
+            // margin: 30px 0px;
+            width: 100%;
+
+
+            // .product__des {
+            //     padding: 30px;
+            //     position: relative;
+
+            //     &__content {
+
+
+            //         max-height: 300px;
+            //         overflow: hidden;
+            //     }
+
+            //     &__content.active {
+            //         max-height: 100%;
+
+
+            //     }
+
+            //     &__btn {
+
+            //         width: 100%;
+            //         text-align: center;
+            //         padding: 15px 0;
+            //         position: absolute;
+            //         bottom: 0;
+            //         font-weight: bold;
+            //         left: 50%;
+            //         transform: translateX(-50%);
+            //         background-color: var(--c_white_default);
+            //         // box-shadow: 5px 2px 3px white;
+            //         cursor: pointer;
+            //         color: var(--c_green_default);
+
+
+            //         span {
+            //             opacity: unset;
+            //             font-weight: bold;
+
+            //         }
+
+            //         &:hover {
+            //             background: linear-gradient(var(--c_green_default), var(--c_green_second));
+            //         }
+
+            //         &.active {
+            //             opacity: 0.6;
+
+            //             &:hover {
+
+            //                 background: transparent;
+            //             }
+
+            //         }
+            //     }
+            // }
+
+
+
+        }
+    }
+}

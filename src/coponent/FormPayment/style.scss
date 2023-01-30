@@ -1,0 +1,47 @@
+.form-payment-wrapper {
+
+    width: 100%;
+
+
+    .form-payment-main {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .form-row {
+            margin-top: 25px;
+
+            &.w-12 {
+                width: 100%;
+            }
+
+            &.w-6 {
+                width: 48%;
+            }
+
+            .form-label {
+                font-size: 1.3rem;
+                font-weight: bold;
+
+
+            }
+
+            .form-input {
+                margin-top: 8px;
+            }
+
+        }
+
+
+        .product-main__btn {
+            width: 60%;
+            margin-top: 50px;
+            margin: 30px auto;
+            height: 60px;
+
+
+
+        }
+    }
+}

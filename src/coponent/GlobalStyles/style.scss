@@ -1,0 +1,156 @@
+ @import "./reset.scss";
+ @import "./font.scss";
+
+
+
+
+
+ :root {
+   --b-white: #f4f4f4;
+   --font-size-defalt: 1.6rem;
+   --c_red-default: #f00;
+   --c_green_default: #00483d;
+   --c_green_second: #00917a;
+   --c_yellow_default: #f7941e;
+   --c_white_default: #fff;
+   --c_red-second: #fd5465;
+
+   --c_black_default: #000;
+
+
+   --w_main-layout: 87%;
+ }
+
+
+ .Toastify__toast {
+   font-family: "font5";
+ }
+
+ // @font-face{
+
+ //   src: url("font/Dancing_Script/DancingScript-VariableFont_wght.ttf");
+ //   font-family:"font1" ;  
+
+ // }
+
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-size: var(--font-size-defalt);
+   font-family: "font2";
+   color: --red-default;
+   font-weight: 500;
+
+
+
+
+
+
+
+
+ }
+
+
+
+
+ html {
+   font-size: 10px;
+
+
+
+ }
+
+
+ body {
+   width: 100%;
+   background-color: var(--b-white);
+
+
+
+ }
+
+
+ ::-webkit-scrollbar {
+   width: 13px;
+ }
+
+ /* Track */
+ //  ::-webkit-scrollbar-track {
+ //    box-shadow: inset 0 0 5px grey;
+ //    border-radius: 10px;
+ //  }
+
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   background: linear-gradient(var(--c_green_default), var(--c_green_second));
+   border-radius: 10px;
+ }
+
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+   background: linear-gradient(var(--c_green_second), var(--c_green_default));
+   ;
+ }
+
+
+
+
+
+
+
+ input,
+ button {
+   outline: none;
+   border: none;
+
+
+ }
+
+ button {
+   cursor: pointer;
+ }
+
+ a {
+   color: black;
+   text-decoration: none;
+
+ }
+
+ ul {
+   list-style: none;
+ }
+
+ input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+ }
+
+ /* Firefox */
+ input[type=number] {
+   -moz-appearance: textfield;
+ }
+
+
+
+ @media only screen and (max-width: 60rem) {
+
+   :root {
+     --b-white: #f4f4f4;
+     --font-size-defalt: 1.6rem;
+     --c_red-default: #f00;
+     --c_green_default: #00483d;
+     --c_green_second: #00917a;
+     --c_yellow_default: #f7941e;
+     --c_white_default: #fff;
+     --c_red-second: #fd5465;
+
+     --c_black_default: #000;
+
+
+     --w_main-layout: 100%;
+   }
+
+
+ }

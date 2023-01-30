@@ -1,0 +1,38 @@
+// .content{
+//     margin-top: 20px;
+// }
+
+
+.default-layout {
+    margin: 0 auto;
+    width: var(--w_main-layout);
+
+    &__slider {
+        margin-top: 20px;
+    }
+
+    &__sub-banner {
+        margin: 30px 0;
+    }
+
+    &__about-us {}
+
+    &__contact {
+        margin-top: 30px;
+
+    }
+
+    // &__sub-banner {
+    //     margin: 20px 0;
+    // }
+
+}
+
+
+@media only screen and (max-width: 60rem) {
+
+
+    .default-layout__sub-banner {
+        display: none;
+    }
+}

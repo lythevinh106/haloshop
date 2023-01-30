@@ -1,0 +1,19 @@
+.popper-wrapper {
+
+  box-shadow: 0 4px 6px #00000029;
+  border-radius: 10px;
+  height: 100%;
+
+  // overflow: hidden;
+  &.grey {
+    box-shadow: 0 4px 6px #e5e5e5;
+  }
+
+  &.bubble {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  }
+}
+
+.popper-wrapper.big-shadow {
+  box-shadow: 0 20px 13px #00000029;
+}
