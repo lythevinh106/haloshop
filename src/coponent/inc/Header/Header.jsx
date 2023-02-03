@@ -10,6 +10,7 @@ import CatHeader from './CatHeader/CatHeader';
 import ProgressHeader from '../../../ProgressHeader/ProgressHeader';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import SkeletonCat from '../../SkeletonComp/SkeletonCat';
 
 
 
@@ -59,7 +60,9 @@ function Header({ }) {
 
                 <div className="header-cat">
                     <CatHeader />
+
                 </div>
+
 
             </div>
 

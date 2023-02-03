@@ -17,6 +17,7 @@ import Stack from '@mui/material/Stack';
 
 import ProductApi from "./../../Service/ProductApi.js"
 import { useParams, useSearchParams } from 'react-router-dom';
+import SkeletonProduct from '../SkeletonComp/SkeletonProduct';
 
 Product.propTypes = {
 
@@ -26,6 +27,9 @@ function Product({ categorySlug = null, headerTitle, isPagination = false, limit
 
     const { category } = useParams();
     let [searchParams, setSearchParams] = useSearchParams();
+
+
+    let [isLoading, setIsLoading] = useState(false);
 
 
     // console.log(searchParams.get("from"));
@@ -80,7 +84,7 @@ function Product({ categorySlug = null, headerTitle, isPagination = false, limit
     let dem = useRef(0);
 
     useEffect(() => {
-
+        setIsLoading(true);
 
         if (products.length < 0) {
             return
@@ -106,6 +110,7 @@ function Product({ categorySlug = null, headerTitle, isPagination = false, limit
                     ;
 
                 setProducts(response.data);
+                setIsLoading(false);
                 setInfoPage({
                     currentPage: response.current_page,
                     totalPage: response.last_page,
@@ -198,35 +203,36 @@ function Product({ categorySlug = null, headerTitle, isPagination = false, limit
 
                 <TitleCart title={headerTitle} btnOrange />
             </div>
-
-            <div className='product-main'>
-
-
-                {products.length > 0 ?
-
-                    products.map((product, index) => {
-
-                        const productAtr = {
-                            image: product.image,
-                            title: product.name,
-                            newPrice: product.sale_price,
-                            oldPrice: product.origin_price,
-                            id: product.id
-
-                        }
-                        return (
+            {isLoading ? <SkeletonProduct /> :
+                <div className='product-main'>
 
 
-                            <ProductItem key={product.id} {...productAtr} />
-                        )
-                    }) : <h3 className='not-found'>Không tìm Thấy Sản Phẩm Nào</h3>
+                    {products.length > 0 ?
 
-                }
+                        products.map((product, index) => {
+
+                            const productAtr = {
+                                image: product.image,
+                                title: product.name,
+                                newPrice: product.sale_price,
+                                oldPrice: product.origin_price,
+                                id: product.id
+
+                            }
+                            return (
+
+
+                                <ProductItem key={product.id} {...productAtr} />
+                            )
+                        }) : <h3 className='not-found'>Không tìm Thấy Sản Phẩm Nào</h3>
+
+                    }
 
 
 
 
-            </div >
+                </div >
+            }
 
 
 
@@ -250,7 +256,7 @@ function Product({ categorySlug = null, headerTitle, isPagination = false, limit
             }
 
 
-        </div >
+        </div>
 
     );
 }

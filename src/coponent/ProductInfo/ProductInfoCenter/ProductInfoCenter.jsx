@@ -23,6 +23,7 @@ import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 
 
 
+
 ProductInfoCenter.propTypes = {
 
 };
@@ -35,6 +36,8 @@ function ProductInfoCenter({ product }) {
     const [open, setOpen] = useState(false);
 
     const localUser = localStorage.getItem("user") || null;
+
+
 
 
     const dispatch = useDispatch();
@@ -96,6 +99,9 @@ function ProductInfoCenter({ product }) {
     // console.log("day la lay out cua product info center");
     return (
         <PopperWrapper>
+
+
+
             <div className='info-center-wrapper'>
                 <div className="info--price">
                     <span className="info--price__new">

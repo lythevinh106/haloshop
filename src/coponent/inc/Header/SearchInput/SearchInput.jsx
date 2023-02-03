@@ -114,6 +114,8 @@ function SearchInput(props) {
         InputRef.current.focus();
         InputRef.current.value = product.name
 
+        setSearchResult([]);
+
         navigate(`/products/${product.id}`, replace);
     }
 

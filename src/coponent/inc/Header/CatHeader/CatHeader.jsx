@@ -13,6 +13,7 @@ import "./style.scss"
 import { Link, useNavigate } from 'react-router-dom';
 import SlugStr from '../../../../until/SlugStr/SlugStr';
 import CategoryApi from '../../../../Service/CategoryApi';
+import SkeletonCat from '../../../SkeletonComp/SkeletonCat';
 
 CatHeader.propTypes = {
 
@@ -23,6 +24,7 @@ function CatHeader(props) {
 
 
     const [categories, setCategories] = useState([]);
+    const [isLoadDing, setIsLoading] = useState(false)
 
 
 
@@ -43,12 +45,13 @@ function CatHeader(props) {
 
 
     useEffect(() => {
-
+        setIsLoading(true);
 
         (async () => {
             const response = await CategoryApi.getAllCategory({ limit: 20 });
 
             setCategories(response.data);
+            setIsLoading(false);
 
 
         })();
@@ -106,36 +109,38 @@ function CatHeader(props) {
 
 
     return (
-        <ul className='header-cat-wrapper'>
+
+        <>
+            {
+                isLoadDing ? <SkeletonCat /> :
+
+                    <ul className='header-cat-wrapper'>
 
 
-            {processedData.map((data) => {
+                        {processedData.map((data) => {
 
-                return (
-                    categories.map((category) => {
-                        if (data.slugField == category.slug) {
+                            return (
+                                categories.map((category) => {
+                                    if (data.slugField == category.slug) {
 
-                            return (<NavHeaderItem key={category.id} onClick={handleOnClick} catType icon={data.icon}
-
-
-                                slug={category.slug}
-                                title={category.name} />)
-                        }
-
-                    })
-                )
-
-            })}
+                                        return (<NavHeaderItem key={category.id} onClick={handleOnClick} catType icon={data.icon}
 
 
+                                            slug={category.slug}
+                                            title={category.name} />)
+                                    }
+
+                                })
+                            )
+
+                        })}
 
 
 
+                    </ul>
 
-
-
-
-        </ul>
+            }
+        </>
     );
 }
 

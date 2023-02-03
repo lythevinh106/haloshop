@@ -6,6 +6,8 @@ import ProductInfoCenter from './ProductInfoCenter/ProductInfoCenter';
 import PopperWrapper from '../PopperWapper/PopperWrapper';
 import cln from "classnames"
 import ApiProduct from '../../ApiService/ApiProduct';
+import SkeletonInfoCart from '../SkeletonComp/SkeletonInfoCart';
+import SkeletonImageProduct from '../SkeletonComp/SkeletonImageProduct';
 ProductInfo.propTypes = {
 
 };
@@ -43,21 +45,40 @@ function ProductInfo({ product, productImages }) {
             <div className="product__main">
 
 
-                <div className="product__main__slider">
 
-                    <ProductInfoSlider images={productImages} />
 
-                </div>
+                {
+                    !product.image ? <SkeletonImageProduct /> : <div className="product__main__slider">
+
+                        <ProductInfoSlider images={productImages} />
+
+
+
+
+                    </div>
+                }
+
+
+
+
+
+
+
 
                 <div className="product__main__center">
-                    <ProductInfoCenter
+                    {
+                        !product.name ? <SkeletonInfoCart /> : <ProductInfoCenter
 
 
-                        product={product}
+                            product={product}
 
 
 
-                    />
+                        />
+                    }
+
+
+
                 </div>
             </div>
 
