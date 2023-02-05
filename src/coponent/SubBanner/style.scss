@@ -66,7 +66,30 @@
 
 }
 
+@media only screen and (max-width: 1264px) {
+    .sub-banner-wrapper {
+        margin: 0 -15px;
 
+        .sub-banner__img {
+
+            height: auto;
+            width: 50%;
+            padding: 15px;
+
+
+            background: transparent !important;
+
+            img {
+
+                height: 100%;
+                object-fit: cover;
+                border-radius: 6px;
+
+            }
+
+        }
+    }
+}
 
 
 

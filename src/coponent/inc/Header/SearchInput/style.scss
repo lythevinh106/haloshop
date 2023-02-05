@@ -85,7 +85,31 @@
 }
 
 
+@media only screen and (max-width: 1190px) {
+  .header-search {
+    margin: 15px 0px 10px 0px;
+    padding: 0px 5px;
+    display: flex;
+
+    --padding-search-input: 10px;
+    margin-left: unset;
+
+    // &__btn {
+    //   margin-left: 15px;
+    // }
+
+    &__input {
+      width: 350px;
+
+
+
+    }
+  }
+}
+
 ///responsive  mobile
+
+
 
 @media only screen and (max-width: 60rem) {
 

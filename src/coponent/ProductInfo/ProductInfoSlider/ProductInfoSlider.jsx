@@ -69,9 +69,29 @@ function ProductInfoSlider({ images }) {
         asNavFor: nav1,
         ref: slider2,
 
-        slidesToShow: 4,
+        slidesToShow: 5,
         swipeToSlide: true,
         focusOnSelect: true,
+        responsive: [
+
+            {
+                breakpoint: 1550,
+                settings: {
+                    slidesToShow: 4,
+
+                }
+            },
+            {
+                breakpoint: 1250,
+                settings: {
+                    slidesToShow: 3,
+
+                }
+            },
+
+
+
+        ]
 
     }
 
@@ -105,7 +125,7 @@ function ProductInfoSlider({ images }) {
 
                             return (
                                 <div key={image.id} className="slider__img">
-                                    <Image src={image.name} />
+                                    <img src={image.name} />
                                 </div>
                             )
                         })}

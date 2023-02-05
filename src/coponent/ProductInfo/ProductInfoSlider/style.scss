@@ -47,20 +47,40 @@
         margin-bottom: 20px;
         width: 100%;
 
-        height: 90px;
+
         padding: 1px 0px 3px 0px;
-        overflow: hidden;
-
-        .slider__img {
 
 
-            height: 100%;
 
-            padding: 0 10px;
 
+        .slick-list {
+            height: 120px;
+            overflow: hidden;
+
+            .slick-track {
+                width: 100%;
+                height: 100%;
+
+                .slider__img {
+
+
+                    margin-top: 10px;
+                    height: auto;
+                    width: auto;
+                    padding: 0 10px;
+
+
+                    // img {
+                    //     width: 100%;
+
+                    //     object-fit: contain;
+                    // }
+
+                }
+
+            }
 
         }
-
 
         .slick-active.slick-current {
             box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -71,3 +91,20 @@
 
 
 }
+
+// @media only screen and (min-width:1550px) {
+//     .info-slider-wrapper {
+
+
+//         .info-slider--main {
+//             .info-slider--sub {
+//                 .slick-list {
+//                     height: auto;
+//                     overflow: hidden;
+
+//                 }
+//             }
+
+//         }
+//     }
+// }
