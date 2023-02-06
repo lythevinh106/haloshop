@@ -258,9 +258,9 @@ function NavHeader(props) {
 
             dispatch(activeToast({
                 status: "success",
-                message: " đăng kí thành công tin nhắn đã được gửi đến email của bạn, hãy xác thực nó để đăng nhập !!",
+                message: " Đăng kí Thành Công - Tin Nhắn Đã Được Gửi Đến email Của Bạn - Hãy xác thực nó để đăng nhập !!",
                 setting: {
-                    autoClose: 5000,
+                    autoClose: 6000,
                 },
 
                 style: {
