@@ -17,6 +17,10 @@ https://haloshop-9y7q-eboybja0h-lythevinh106.vercel.app/
 
 -Intro Video:https://drive.google.com/file/d/15z3ugmWFxSMO2iJ4KgOpH1Pr1QKY5mmo/view?usp=sharing
 
+# Description
+
+The website has important features like Log In, Sign Up, Cart, Email after Sign Up,Payment Done, Checking Orders,Search Products....
+
 # Features images
 
 ![Alt text](https://data.terabox.com/thumbnail/16131c860b732fa8164758f4de9752fc?fid=4399886613007-250528-1080836307562201&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-OnNw7QFbxMzxtzcoF%2fAJ55PWtGo%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8916664900919745592&dp-callid=0&time=1675652400&size=c1920_u1080&quality=90&vuk=4399886613007&ft=image&autopolicy=1)
