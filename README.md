@@ -4,7 +4,7 @@ https://haloshop-9y7q-eboybja0h-lythevinh106.vercel.app/
 
 # Back End :
 
-+Laravel API
++Laravel API:Private
 +Document Api:https://documenter.getpostman.com/view/16220656/2s8ZDcxeAo
 
 # Front-end
@@ -13,10 +13,14 @@ https://haloshop-9y7q-eboybja0h-lythevinh106.vercel.app/
 +ReactJs+Redux
 +Auth:JWt
 
-# features
+# Features
 
 -Intro Video:https://drive.google.com/file/d/15z3ugmWFxSMO2iJ4KgOpH1Pr1QKY5mmo/view?usp=sharing
 
-# features Image
+# Features images
 
-![Alt text](https://cdn.hoanghamobile.com/i/home/Uploads/2023/01/07/paddd.png)
+![Alt text](https://drive.google.com/file/d/11FAfpxcP8aO-CG_hhJjMC_9r3SNcjFqs/view?usp=sharing)
+![Alt text](https://drive.google.com/file/d/1bwFMzX3iyVLV2ibRwByk1KdvRFViZJSY/view?usp=sharing)
+![Alt text](https://drive.google.com/file/d/18U6el9hBNOMotUuDIL3FdZBstwNFKC4h/view?usp=sharing)
+![Alt text](https://drive.google.com/file/d/1QTGYThZqc7zY7SOuPcJ8MnwqlX5HFvD5/view?usp=sharing)
+![Alt text](https://drive.google.com/file/d/1qJ6xR_gXKzCtbIip0Bb3Yqp4LshOJwtn/view?usp=share_link)
