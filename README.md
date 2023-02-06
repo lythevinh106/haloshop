@@ -4,8 +4,11 @@ https://haloshop-9y7q-eboybja0h-lythevinh106.vercel.app/
 
 # Back End :
 
-+Laravel API:Private
-+Document Api:https://documenter.getpostman.com/view/16220656/2s8ZDcxeAo
++Laravel API:https://github.com/lythevinh106/react-laravel-api
+
+# Document Api:
+
++https://documenter.getpostman.com/view/16220656/2s8ZDcxeAo
 
 # Front-end
 
