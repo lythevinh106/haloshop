@@ -19,8 +19,9 @@ https://haloshop-9y7q-eboybja0h-lythevinh106.vercel.app/
 
 # Features images
 
-![Alt text](https://drive.google.com/file/d/11FAfpxcP8aO-CG_hhJjMC_9r3SNcjFqs/view?usp=sharing)
+![Alt text](blob:https://vercel.com/1e511405-ed86-46fb-b3ae-f1504b09f75e)
 ![Alt text](https://drive.google.com/file/d/1bwFMzX3iyVLV2ibRwByk1KdvRFViZJSY/view?usp=sharing)
 ![Alt text](https://drive.google.com/file/d/18U6el9hBNOMotUuDIL3FdZBstwNFKC4h/view?usp=sharing)
 ![Alt text](https://drive.google.com/file/d/1QTGYThZqc7zY7SOuPcJ8MnwqlX5HFvD5/view?usp=sharing)
-![Alt text](https://drive.google.com/file/d/1qJ6xR_gXKzCtbIip0Bb3Yqp4LshOJwtn/view?usp=share_link)
+![Alt text](https://drive.google.com/file/d/1qJ6xR_gXKzCtbIip0Bb3Yqp4LshOJwtn/view?usp=share_link);
+![Alt text](https://terabox.com/s/1gWsC4VufCQj687bcHO4lKw)
