@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 
 
 function useDebounce(value, delay) {
-
     const [valueDebounce, setValueDebounce] = useState(value);
+    
     useEffect(() => {
-
         const timeID = setTimeout(() => {
             setValueDebounce(value);
             // console.log("chay ham time out")
@@ -17,8 +16,6 @@ function useDebounce(value, delay) {
 
             // console.log("chay ham clear")
             clearTimeout(timeID)
-
-
         };
 
     }, [value])

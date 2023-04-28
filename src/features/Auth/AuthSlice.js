@@ -64,15 +64,11 @@ export const updateInfo = createAsyncThunk(
     async (payload) => {
         // Gọi lên API backend
 
-
-
         try {
 
             const response = await AuthApi.updateInfo(payload);
 
             if (response.original.status == 201) {
-
-
 
                 // localStorage.setItem("user", JSON.stringify(response.user));
 

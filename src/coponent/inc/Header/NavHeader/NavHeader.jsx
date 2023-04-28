@@ -349,17 +349,8 @@ function NavHeader(props) {
 
             <ModalWrapper open={isOpenModal} onClose={onCloseModal}
                 component={
-
-
-
                     isFormLogin ? <FormLogin onChangeForm={handleChangeFormRegister} onSubmit={handleLoginSubmit} />
-
-
                         : <FormRegister onChangeForm={handleChangeFormLogin} onSubmit={handleRegisterSubmit} />
-
-
-
-
 
                 }
 

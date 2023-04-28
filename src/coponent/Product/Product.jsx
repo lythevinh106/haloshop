@@ -53,9 +53,6 @@ function Product({ categorySlug = null, headerTitle, isPagination = false, limit
     const [loadMore, SetLoadMore] = useState({
         limit: category != undefined ? 15 : 30,
         page: 1
-
-
-
     });
 
 
@@ -103,7 +100,8 @@ function Product({ categorySlug = null, headerTitle, isPagination = false, limit
                         slug_cat: categorySlug,
                         from: searchParams.get("from") || 0,
                         to: searchParams.get("to") || 100000000000000,
-                        sort: searchParams.get("sort") || "asc"
+                        sort: searchParams.get("sort") || "asc",
+                        // page: categorySlug ? 1:loadMore.page
                     })
 
 
