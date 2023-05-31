@@ -5,7 +5,7 @@ Image.propTypes = {
 
 };
 
-function Image({ src, alt, ...props }) {
+function Image({ src, alt, ...otherProps }) {
 
     const [ImageErr, setImageErr] = useState("");
     // console.log(src);
@@ -21,7 +21,7 @@ function Image({ src, alt, ...props }) {
 
     return (
         <>
-            <img  {...props} src={ImageErr || src} alt={alt || ""} onError={handleError} />
+            <img  {...otherProps} src={ImageErr || src} alt={alt || ""} onError={handleError} />
 
         </>
     );

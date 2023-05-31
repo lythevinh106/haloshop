@@ -92,19 +92,28 @@
 
 }
 
-// @media only screen and (min-width:1550px) {
-//     .info-slider-wrapper {
+@media only screen and (max-width:767px) {
+    .info-slider--sub {
+        .slick-list {
+            height: 150px !important;
+            overflow: hidden;
 
 
-//         .info-slider--main {
-//             .info-slider--sub {
-//                 .slick-list {
-//                     height: auto;
-//                     overflow: hidden;
 
-//                 }
-//             }
+        }
+    }
 
-//         }
-//     }
-// }
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .info-slider--sub {
+        .slick-list {
+            min-height: 320px !important;
+            overflow: hidden;
+
+
+
+        }
+    }
+
+}

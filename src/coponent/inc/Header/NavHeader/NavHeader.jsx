@@ -42,8 +42,6 @@ function NavHeader(props) {
 
 
 
-
-
     // const modalRef = useRef();
     const localCart = localStorage.getItem("cart");
     const isMiniCart = useSelector((state) => state.cart.showMiniCart);
@@ -94,9 +92,6 @@ function NavHeader(props) {
         }
 
     }
-
-
-
 
     const [isLogin, setIsLogin] = useState(localUser ? true : false);
     const [info, setInfo] = useState(localUser || []);
@@ -530,7 +525,8 @@ function NavHeader(props) {
             </div>
 
 
-            <DrawerMain component={<ListCategoryMobile onCatMobileClick={() => { setIsDrawerMenu(false) }} />} isDrawer={isDrawerMenu}
+            <DrawerMain component={<ListCategoryMobile onCatMobileClick={() => { setIsDrawerMenu(false) }} />}
+                isDrawer={isDrawerMenu}
                 setIsClose={() => { setIsDrawerMenu(false) }} />
 
 

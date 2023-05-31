@@ -32,7 +32,20 @@ function SubSlider({ otherProducts }) {
                     slidesToShow: 2,
 
                 }
-            },]
+
+            },
+
+            {
+                breakpoint: 1023,
+                settings: {
+                    slidesToShow: 4,
+
+                }
+
+            },
+
+
+        ]
 
 
     }
@@ -80,7 +93,7 @@ function SubSlider({ otherProducts }) {
 
                                 <ProductItem sliderStyle title={product.name} id={product.id}
 
-
+                                    avgRating={product.rates[0]?.average_rating || null}
 
                                     image={product.image}
                                     newPrice={product.sale_price} oldPrice={product.origin_price}

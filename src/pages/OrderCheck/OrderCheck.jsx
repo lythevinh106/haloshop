@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import "./style.scss";
 import { Box, TextField } from '@mui/material';
-import Button from '@mui/material/Button';
+
 import { useForm } from "react-hook-form";
 import OrderApi from '../../Service/OrderApi';
 import { useDispatch } from 'react-redux';
@@ -12,7 +12,9 @@ import { activeProgress } from '../../features/progress/progressSlice';
 import { status_content } from '../../until/status_content';
 import FormatPrice from '../../until/FormatPrice/FormatPrice';
 // import Product from '../../coponent/Product/Product';
-
+// import { read, utils, writeFile } from 'xlsx';
+import * as XLSX from 'xlsx';
+import Button from '@mui/material/Button';
 OrderCheck.propTypes = {
 
 };
@@ -50,7 +52,7 @@ function OrderCheck(props) {
 
     const dispatch = useDispatch();
 
-    const [listOrder, setListOrder] = useState();
+    const [listOrder, setListOrder] = useState([]);
     const [error, setError] = useState(false);
 
 
@@ -111,6 +113,36 @@ function OrderCheck(props) {
     };
 
 
+    const exportToExcel = () => {
+
+        let newListOrder = [...listOrder];
+
+        let newdata = newListOrder.map((item) => {
+
+            const itemData = [
+                item.name,
+                item.quantity,
+                item.sale_price * item.quantity,
+                item.created_at,]
+            return itemData;
+
+
+
+        })
+
+        // console.log([...listOrder]);
+
+        const dataExcel = [
+            ['Tên Sản Phẩm', 'Số Lượng ', 'Tổng Giá Của Sản Phẩm', 'Thời Gian Đặt'],
+            ...newdata
+        ];
+        console.log(dataExcel);
+        const ws = XLSX.utils.aoa_to_sheet(dataExcel);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+
+        XLSX.writeFile(wb, 'đơnhang.xlsx');
+    };
 
 
     return (
@@ -174,6 +206,13 @@ function OrderCheck(props) {
 
                     })}
                 </div>
+                {listOrder.length > 0 && <Button size="large" sx={{
+                    textAlign: "center",
+                    margin: "10px auto",
+                    display: "block",
+                }} onClick={exportToExcel} variant="contained">Xuất File Excel</Button>}
+
+
             </div>
 
 

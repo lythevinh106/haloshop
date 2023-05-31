@@ -23,7 +23,7 @@ function LayoutModeSnowEffect({ children }) {
 
 
             <div className='effect-snow'>
-                <Snowfall
+                {/* <Snowfall
                     style={{
 
                         position: "fixed",
@@ -37,7 +37,7 @@ function LayoutModeSnowEffect({ children }) {
                     images={images}
                     rotationSpeed={[-1, 1]}
 
-                />
+                /> */}
             </div>
 
             {children}

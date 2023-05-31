@@ -163,7 +163,8 @@ function FormRegister({ onSubmit = () => { }, onChangeForm = () => { } }) {
 
 
                     <InputMUi sx={{
-                        marginTop: "15px", "textarea": {
+                        marginTop: "15px",
+                        "textarea": {
 
                             fontSize: "18px"
                             ,

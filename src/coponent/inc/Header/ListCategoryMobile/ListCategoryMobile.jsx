@@ -93,7 +93,7 @@ function ListCategoryMobile({ onCatMobileClick = () => { } }) {
                 padding: "0px 0px"
             }}>
                 <Typography sx={{
-                    fontSize: "2.4rem",
+                    fontSize: "2.2rem",
                     textAlign: "center",
                     color: "#ffff",
                     fontWeight: "bold",
@@ -116,7 +116,7 @@ function ListCategoryMobile({ onCatMobileClick = () => { } }) {
                                 return (
 
                                     <ListItem key={index} disablePadding sx={{
-                                        borderBottom: "1px solid #00483d"
+                                        borderBottom: "2px solid #00483d"
                                     }}
 
 

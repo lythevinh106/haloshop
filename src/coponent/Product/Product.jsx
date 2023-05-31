@@ -214,9 +214,11 @@ function Product({ categorySlug = null, headerTitle, isPagination = false, limit
                                 title: product.name,
                                 newPrice: product.sale_price,
                                 oldPrice: product.origin_price,
-                                id: product.id
+                                id: product.id,
+                                avgRating: product?.rates[0]?.average_rating || null
 
                             }
+                            console.log(productAtr.avgRating);
                             return (
 
 
@@ -239,12 +241,13 @@ function Product({ categorySlug = null, headerTitle, isPagination = false, limit
                     <Button btnWhite onClick={handleLoadMoreClick}>Xem thêm </Button>
 
                 </div> :
-                    <span className='product_pagination'> <Stack spacing={2}>
-                        {/* {console.log(products)} */}
-                        <Pagination page={infoPage?.currentPage} count={infoPage?.totalPage} defaultPage={products.last_page}
-                            color="primary" size='large' onChange={handlePaginationChange} />
+                    <span className='product_pagination'>
+                        <Stack spacing={2}>
+                            {/* {console.log(products)} */}
+                            <Pagination page={infoPage?.currentPage} count={infoPage?.totalPage} defaultPage={products.last_page}
+                                color="primary" size='large' onChange={handlePaginationChange} />
 
-                    </Stack>
+                        </Stack>
                     </span>
 
 

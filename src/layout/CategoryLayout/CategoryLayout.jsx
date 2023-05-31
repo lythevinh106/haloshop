@@ -32,7 +32,7 @@ const bigBanner = [
 
     {
         id: 1,
-        image: "https://cdn.hoanghamobile.com/i/home/Uploads/2022/12/12/smart-tivi-casper-01-2.jpg"
+        image: "https://hoanghamobile.com/Content/summer/logo-summer.png"
     },
 
 
@@ -49,7 +49,7 @@ function CategoryLayout({ children }) {
             <Header />
 
             <div className="category-layout__sub-banner" >
-                <SubBanner listBanner={bigBanner} col1 />
+                <SubBanner listBanner={bigBanner} col1 style={{ width: "100%", height: "auto" }} />
             </div>
 
             {children}

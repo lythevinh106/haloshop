@@ -224,7 +224,7 @@ function Category(props) {
 
 
                         <div className="category-filter__result">
-                            <PopperWrapper bigShadow>
+                            <div >
                                 <div className="filter-result-main">
                                     {resultItem && resultItem.map((item) => {
                                         return (
@@ -244,14 +244,14 @@ function Category(props) {
 
                                     })}
                                 </div>
-                            </PopperWrapper>
+                            </div>
                         </div>
                     </div>
                 </PopperWrapper>
 
             </div >
             <div className="category-product">
-                <Product categorySlug={linkParam.category} headerTitle="smartTV" isPagination limit={10} />
+                <Product categorySlug={linkParam.category} headerTitle="Sản Phẩm" isPagination limit={10} />
             </div>
 
 

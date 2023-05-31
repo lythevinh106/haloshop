@@ -13,14 +13,17 @@ import ModalBuyNow from '../../ModalBuyNow/ModalBuyNow';
 import { useDispatch } from 'react-redux';
 
 import { addCartAuth, addToCart } from "./../../../features/Cart/CartSlice.js"
-import { activeProgress } from "./../../../features/progress/progressSlice.js"
+import { activeProgress, activeToast } from "./../../../features/progress/progressSlice.js"
 
 
 
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
-
+import MyRating from '../../Rating/Rating';
+import { Box, Typography } from '@mui/material';
+import CartApi from '../../../Service/CartApi';
+import ProductApi from '../../../Service/ProductApi';
 
 
 
@@ -35,12 +38,18 @@ function ProductInfoCenter({ product }) {
 
     const [open, setOpen] = useState(false);
 
+
+    const [valueRating, setValueRating] = useState(0);
+
+
     const localUser = localStorage.getItem("user") || null;
 
 
-
-
     const dispatch = useDispatch();
+
+
+
+
 
 
 
@@ -93,6 +102,129 @@ function ProductInfoCenter({ product }) {
     const handleClose = () => {
         setAnchorEl(null);
     };
+
+    console.log(valueRating);
+    useEffect(() => {
+
+        if (!localUser) {
+            return;
+        }
+        else {
+            try {
+
+                (async () => {
+
+                    const response = await ProductApi.checkRatingProduct(product.id, {
+                        "userID": JSON.parse(localUser)?.id,
+
+                    });
+
+                    // console.log(response.original.result);
+
+                    setValueRating(response.original.result);
+
+
+
+
+                })();
+
+
+            } catch (error) {
+
+            }
+        }
+
+
+
+    }, [product.id])
+
+
+    const handleOnChangeRating = async (event, newValue) => {
+
+
+
+
+
+
+        if (localUser) {
+
+
+
+            try {
+
+
+                const response = await ProductApi.ratingProduct(product.id, {
+                    "userID": JSON.parse(localUser)?.id,
+                    "rating": newValue
+                });
+
+
+
+
+                setValueRating(newValue);
+                dispatch(activeToast({
+                    status: "success",
+                    message: "Bạn Đã Đánh Giá Sản Phẩm Thành Công",
+                    setting: {
+                        autoClose: 1500,
+                    },
+
+                    style: {
+                        fontSize: "5px",
+                        fontWeight: "bold",
+                        color: "#00483d"
+
+                    }
+
+
+                }));
+
+            } catch (error) {
+                dispatch(activeToast({
+                    status: "error",
+                    message: "Có Lỗi",
+                    setting: {
+                        autoClose: 1500,
+                    },
+
+                    style: {
+                        fontSize: "5px",
+                        fontWeight: "bold",
+                        color: "#00483d"
+
+                    }
+
+
+                }));
+            }
+
+
+        }
+        else {
+            dispatch(activeToast({
+                status: "error",
+                message: "Vui Lòng Đăng Nhập Để Sử Dụng Chức Năng Này",
+                setting: {
+                    autoClose: 1500,
+                },
+
+                style: {
+                    fontSize: "5px",
+                    fontWeight: "bold",
+                    color: "#00483d"
+
+                }
+
+
+            }));
+
+            return;
+        }
+
+
+
+    }
+
 
 
 
@@ -147,6 +279,28 @@ function ProductInfoCenter({ product }) {
 
 
                 <ModalBuyNow productInfoCenter={product} open={open} onClick={handleModalClick} />
+
+                <div className="info--rating">
+
+                    <MyRating title='Chọn Đánh Giá Của Bạn'
+
+                        value={valueRating || 0}
+                        onChange={handleOnChangeRating}
+
+
+
+                    ></MyRating>
+
+
+
+
+
+
+                </div>
+
+
+
+
 
                 <div className="info--btn">
 

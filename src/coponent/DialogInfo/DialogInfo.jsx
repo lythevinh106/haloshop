@@ -59,7 +59,7 @@ export default function DialogInfo({
 
             }}>
                 <Face6Icon fontSize='large'></Face6Icon>
-                <Typography fontSize="18px" fontWeight="bold">{name}</Typography>
+                {/* <Typography fontSize="18px" fontWeight="bold">{name}</Typography> */}
             </DialogTitle>
             <List sx={{ padding: "0px" }}>
 

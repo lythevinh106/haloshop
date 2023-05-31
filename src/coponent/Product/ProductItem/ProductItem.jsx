@@ -15,10 +15,11 @@ import cln from "classnames"
 import { activeProgress, activeToast } from '../../../features/progress/progressSlice';
 import { useSelector, useDispatch } from 'react-redux'
 import { addCartAuth, addToCart } from '../../../features/Cart/CartSlice';
+import MyRating from '../../Rating/Rating';
 
 
 function ProductItem({ image, title = 0, oldPrice = 0, newPrice = 0, id = 0, sliderStyle = false,
-    cartStyle = false }) {
+    cartStyle = false, avgRating }) {
 
     const cartValue = useSelector((state) => state.cart.value);
     const dispatch = useDispatch();
@@ -133,6 +134,17 @@ function ProductItem({ image, title = 0, oldPrice = 0, newPrice = 0, id = 0, sli
                     </Link>
 
 
+                    <div className="product-item__rating">
+
+                        <MyRating readOnly
+
+                            value={avgRating}
+
+
+
+                        ></MyRating>
+                    </div>
+
                     <div className="product-item__price" >
                         <div className="price--new">
 
@@ -156,6 +168,9 @@ function ProductItem({ image, title = 0, oldPrice = 0, newPrice = 0, id = 0, sli
                                 Mua Ngay
                             </Button>
                         </div>
+
+
+
                         <div className="product-btn-wrapper">
                             <Button btnRed SizeNormal onClick={() => {
                                 handleBtnCartOnClick({
@@ -172,6 +187,8 @@ function ProductItem({ image, title = 0, oldPrice = 0, newPrice = 0, id = 0, sli
                             </Button>
 
                         </div>
+
+
                     </div>
 
 

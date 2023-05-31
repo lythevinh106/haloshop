@@ -9,6 +9,7 @@
         margin: 10px 0px;
         font-size: 20px;
         font-family: "font5";
+        font-weight: 600;
 
     }
 
@@ -101,6 +102,42 @@
         }
 
 
+
+    }
+
+
+    .product__comment-wrapper {
+
+        width: 100%;
+        background-color: var(--c_white_default);
+        min-height: 100px !important;
+
+        .product__comment {
+            padding: 30px !important;
+
+            &__title {
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+
+            &__form {
+                margin-top: 15px;
+            }
+
+            &__main {
+                margin-top: 30px;
+            }
+
+            &__alert {
+                margin-top: 18px;
+                font-weight: bold;
+                text-align: center;
+                color: var(--c_green_default);
+            }
+
+        }
 
     }
 }

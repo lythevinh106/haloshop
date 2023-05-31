@@ -9,7 +9,7 @@ SubBanner.propTypes = {
 
 };
 
-function SubBanner({ listBanner, col1 = false, col2 = false, col3 = false }) {
+function SubBanner({ listBanner, col1 = false, col2 = false, col3 = false, ...otherProp }) {
 
     // console.log("day la sub banner")
 
@@ -41,7 +41,7 @@ function SubBanner({ listBanner, col1 = false, col2 = false, col3 = false }) {
                             <PopperWrapper >
 
 
-                                <Image src={banner.image} />
+                                <Image src={banner.image} {...otherProp} />
 
 
 
