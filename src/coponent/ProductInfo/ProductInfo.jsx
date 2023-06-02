@@ -13,6 +13,7 @@ import FormComment from '../Form/FormComment/FormComment';
 import ProductApi from '../../Service/ProductApi';
 import { useDispatch } from 'react-redux';
 import { activeToast } from '../../features/progress/progressSlice';
+import AuthApi from '../../Service/Auth';
 ProductInfo.propTypes = {
 
 };
@@ -68,7 +69,7 @@ function ProductInfo({ product, productImages }) {
             try {
 
 
-                const response = await ProductApi.addComment(product.id, {
+                const response = await AuthApi.addComment(product.id, {
                     userID: JSON.parse(localUser).id,
                     commentText: data.comment,
                     parentCommentID: commentId

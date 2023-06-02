@@ -24,6 +24,7 @@ import MyRating from '../../Rating/Rating';
 import { Box, Typography } from '@mui/material';
 import CartApi from '../../../Service/CartApi';
 import ProductApi from '../../../Service/ProductApi';
+import AuthApi from '../../../Service/Auth';
 
 
 
@@ -114,7 +115,7 @@ function ProductInfoCenter({ product }) {
 
                 (async () => {
 
-                    const response = await ProductApi.checkRatingProduct(product.id, {
+                    const response = await AuthApi.checkRatingProduct(product.id, {
                         "userID": JSON.parse(localUser)?.id,
 
                     });
@@ -153,7 +154,7 @@ function ProductInfoCenter({ product }) {
             try {
 
 
-                const response = await ProductApi.ratingProduct(product.id, {
+                const response = await AuthApi.ratingProduct(product.id, {
                     "userID": JSON.parse(localUser)?.id,
                     "rating": newValue
                 });

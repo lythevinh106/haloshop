@@ -102,23 +102,23 @@ const ProductApi = {
 
 
 
-    ratingProduct(id, data) {
-        return AxiosMain.post(`/product/ratingProduct/${id}`, data, {
+    // ratingProduct(id, data) {
+    //     return AxiosMain.post(`/product/ratingProduct/${id}`, data, {
 
-        });
-    },
-    checkRatingProduct(id, data) {
-        return AxiosMain.post(`/product/checkRatingProduct/${id}`, data, {
+    //     });
+    // },
+    // checkRatingProduct(id, data) {
+    //     return AxiosMain.post(`/product/checkRatingProduct/${id}`, data, {
 
-        });
-    },
+    //     });
+    // },
 
 
-    addComment(id, data) {
-        return AxiosMain.post(`/product/addComment/${id}`, data, {
+    // addComment(id, data) {
+    //     return AxiosMain.post(`/product/addComment/${id}`, data, {
 
-        });
-    },
+    //     });
+    // },
     showComment(id) {
         return AxiosMain.post(`/product/showComment/${id}`, {
 

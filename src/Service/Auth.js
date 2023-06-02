@@ -103,6 +103,24 @@ const AuthApi = {
 
     },
 
+    ratingProduct(id, data) {
+        return AxiosMainAuth.post(`/product/ratingProduct/${id}`, data, {
+
+        });
+    },
+    checkRatingProduct(id, data) {
+        return AxiosMainAuth.post(`/product/checkRatingProduct/${id}`, data, {
+
+        });
+    },
+
+
+    addComment(id, data) {
+        return AxiosMainAuth.post(`/product/addComment/${id}`, data, {
+
+        });
+    },
+
 
 
 
